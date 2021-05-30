@@ -1,0 +1,24 @@
+<script type="module" src="/js/Game.js"></script>
+
+<script type="module">
+  import Game from '/js/Game.js';
+
+  function getApi(data) {
+    document.querySelector('.output-score').innerText = data.score;
+    document.querySelector('.leader-board__score').value = data.fixScore;
+  }
+
+  document
+    .querySelector('.input__input-level')
+    .addEventListener('change', e => {
+      game.multiplier = e.target.value;
+      game.fps = 100 / e.target.value;
+      localStorage.setItem('level', e.target.value);
+      e.target.blur();
+    });
+
+  const level = localStorage.getItem('level') || 1;
+  document.querySelector('.input__input-level').value = JSON.parse(level);
+  const game = new Game(30, 30, 10, JSON.parse(level));
+  game.subscribe(getApi);
+</script>

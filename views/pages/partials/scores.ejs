@@ -1,0 +1,18 @@
+<table class="leader-board__table">
+  <thead class="leader-board__table-head">
+    <tr class="leader-board__table-row">
+      <th class="leader-board__table-cell">Rank</th>
+      <th class="leader-board__table-cell">Name</th>
+      <th class="leader-board__table-cell">Score</th>
+    </tr>
+  </thead>
+  <tbody class="leader-board__table-body">
+    <% scores.forEach((score, key) => { %>
+    <tr class="leader-board__table-row">
+      <td class="leader-board__table-cell"><%= key + 1 %></td>
+      <td class="leader-board__table-cell"><%= score.name %></td>
+      <td class="leader-board__table-cell"><%= score.score %></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>

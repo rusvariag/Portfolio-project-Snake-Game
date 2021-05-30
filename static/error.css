@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sad-smile {
+  font-size: 18rem;
+  color: #aaa;
+}
+
+.error {
+  margin: 0;
+  font-size: 10rem;
+  font-weight: bold;
+  color: #aaa;
+}
+.error-text {
+  margin: 0;
+  color: #ccc;
+  font-size: 3rem;
+}
+.description {
+  color: #666;
+}
+.link a {
+  font-size: 1.2rem;
+  color: #666;
+  text-decoration: none;
+}

@@ -1,0 +1,43 @@
+<div class="container">
+  <h2 class="container__title">Welcome to the retro snake game</h2>
+  <div class="game-container">
+    <div class="input">
+      <div class="input__controller">
+        <label>Level :</label>
+        <select class="input__input-level">
+          <option value="" disabled>Choose Level...</option>
+          <option value="1">Noob</option>
+          <option value="2">Normal</option>
+          <option value="3">Hard</option>
+          <option value="4">Hell</option>
+        </select>
+      </div>
+      <div class="input__controller">
+        <span>Score :</span>
+        <span class="output-score"></span>
+      </div>
+    </div>
+    <div id="game"></div>
+  </div>
+  <div class="leader-board">
+    <form
+      onsubmit="event.Handled = true"
+      class="leader-board__form"
+      method="POST"
+      action="/"
+    >
+      <input
+        class="leader-board__input"
+        placeholder="Enter your name"
+        type="text"
+        name="name"
+      />
+      <input class="leader-board__score" type="text" name="score" />
+      <button class="leader-board__submit" type="submit" name="button">
+        Submit
+      </button>
+    </form>
+
+    <%- include(`./partials/scores.ejs`) %>
+  </div>
+</div>

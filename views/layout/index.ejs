@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include(`./partials/metas.ejs`) %>
+    <title><%= siteName %></title>
+    <%- include(`./partials/styles.ejs`) %>
+  </head>
+  <body>
+    <%- include(`../pages/${template}`) %>
+  </body>
+  <%- include(`./partials/scripts.ejs`) %>
+</html>
